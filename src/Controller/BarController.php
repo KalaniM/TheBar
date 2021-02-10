@@ -56,6 +56,16 @@ class BarController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/home", name="home")
+     */
+    public function home()
+    {
+        return $this->render('home/index.html.twig', [
+            'page_title' => 'Accueil'
+        ]);
+    }
+
     private function beers_api(): array
     {
         $response = $this->client->request(

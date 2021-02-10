@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BarController!{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
 <style>
@@ -9,16 +9,12 @@
 </style>
 
 {% include 'partials/menu.html.twig' %}
-        
+
 <div class="container">
     <div class="row">
-        <div class="col-3">
-            Sidebar
-        </div>
-        <div class="col-7">
+        <div class="col-3">Sidebar</div>
+        <div class="col-9">
             <h1>{{page_title}}</h1>
-            
-        </div>
     </div>
 </div>
 {% endblock %}
