@@ -18,6 +18,16 @@ class BarController extends AbstractController
     }
 
     /**
+     * @Route("/home", name="home")
+     */
+    public function home()
+    {
+        return $this->render('home/index.html.twig', [
+            'page_title' => 'Accueil'
+        ]);
+    }
+
+    /**
      * @Route("/bar", name="bar")
      */
     public function index(): Response
@@ -28,18 +38,6 @@ class BarController extends AbstractController
             'cards_infos' => 'With supporting text below as a natural lead-in to additional content.'
         ]);
     }
-
-    //    /**
-    //  * @Route("/bar", name="bar")
-    //  */
-    // public function index(): Response
-    // {
-    //     return $this->render('bar/index.html.twig', [
-    //         'page_title' => 'The bar',
-    //         'cards_title' => 'Special title treatment',
-    //         'cards_infos' => 'With supporting text below as a natural lead-in to additional content.'
-    //     ]);
-    // }
 
     /**
      * @Route("/beers", name="beers")
@@ -53,16 +51,6 @@ class BarController extends AbstractController
         return $this->render('beers/index.html.twig', [
             'page_title' => 'The beers',
             'beers' => $beers
-        ]);
-    }
-
-    /**
-     * @Route("/home", name="home")
-     */
-    public function home()
-    {
-        return $this->render('home/index.html.twig', [
-            'page_title' => 'Accueil'
         ]);
     }
 
