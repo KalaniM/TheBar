@@ -28,16 +28,29 @@ class BarController extends AbstractController
             'cards_infos' => 'With supporting text below as a natural lead-in to additional content.'
         ]);
     }
+
+    //    /**
+    //  * @Route("/bar", name="bar")
+    //  */
+    // public function index(): Response
+    // {
+    //     return $this->render('bar/index.html.twig', [
+    //         'page_title' => 'The bar',
+    //         'cards_title' => 'Special title treatment',
+    //         'cards_infos' => 'With supporting text below as a natural lead-in to additional content.'
+    //     ]);
+    // }
+
     /**
-     * @Route("/mention", name="mention")
+     * @Route("/beers", name="beers")
      */
-    public function mention()
+    public function beers()
     {
 
         // dump($this->beers_api());
         $beers = $this->beers_api();
 
-        return $this->render('bar/mention.html.twig', [
+        return $this->render('beers/index.html.twig', [
             'page_title' => 'The beers',
             'beers' => $beers
         ]);
