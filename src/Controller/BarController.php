@@ -34,12 +34,12 @@ class BarController extends AbstractController
     public function mention()
     {
 
-        dump($this->beers_api());
+        // dump($this->beers_api());
+        $beers = $this->beers_api();
 
         return $this->render('bar/mention.html.twig', [
-            'page_title' => 'Mentions légales',
-            'cards_title' => 'Mentions',
-            'cards_infos' => 'With supporting text below as a natural lead-in to additional content? '
+            'page_title' => 'The beers',
+            'beers' => $beers
         ]);
     }
 
@@ -59,6 +59,6 @@ class BarController extends AbstractController
         $content = $response->toArray();
         // $content = ['id' => 521583, 'name' => 'symfony-docs', ...]
 
-        return $content;
+        return $content["beers"];
     }
 }

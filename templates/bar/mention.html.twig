@@ -13,12 +13,14 @@
         <div class="col-3">Sidebar</div>
         <div class="col-9">
             <h1>{{page_title}}</h1>
+        {% for beer in beers %}
             <div class="card" style="width: 30rem;">
                 <div class="card-body">
-                <h5 class="card-title">{{cards_title}}</h5>
-                <p class="card-text">{{cards_infos}}</p>
+                    <h5 class="card-title">Name : {{ beer.name }}</h5>
+                    <p class="card-text">Degree : {{beer.degree}}</p>
+                </div>
             </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
