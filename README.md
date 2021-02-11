@@ -26,6 +26,12 @@ symfony server:start
 
 #### Compile
 
+Install dependancies
+
+```
+ npm i
+```
+
 Compile assets once
 
 ```
