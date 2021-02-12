@@ -40,6 +40,10 @@ Encore
      * list of features, see:
      * https://symfony.com/doc/current/frontend.html#adding-more-features
      */
+    .copyFiles({
+        from : './assets/images',
+        to : 'images/[path][name].[hash:8].[ext]'
+    })
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
@@ -71,6 +75,7 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
+
 ;
 
 module.exports = Encore.getWebpackConfig();

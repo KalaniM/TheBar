@@ -1,29 +1,40 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello BarController!{% endblock %}
+{% block title %}Hello BarController!
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
 
-{% include 'partials/menu.html.twig' %}
+	{% include 'partials/menu.html.twig' %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-3">Sidebar</div>
-        <div class="col-9">
-            <h1>{{page_title}}</h1>
-        {% for beer in beers %}
-            <div class="card" style="width: 30rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Name : {{ beer.name }}</h5>
-                    <p class="card-text">Degree : {{beer.degree}}</p>
-                    <img src="{{ asset('assets/images/beer_00.jpeg') }}" />
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-</div>
-{% endblock %}
+	<div class="container">
+		<div class="row">
+			<div class="col-3">Sidebar</div>
+			<div class="col-9">
+				<h1>{{page_title}}</h1>
+				{% for beer in beers %}
+					<div class="card" style="width: 30rem;">
+						<div class="card-body">
+							<h5 class="card-title">Name :
+								{{ beer.name }}</h5>
+							<p class="card-text">Degree :
+								{{beer.degree}}</p>
+							<img src="{{ asset('build/images/beer_00.jpg') }}"/>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% endblock %}
